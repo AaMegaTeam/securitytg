@@ -3,7 +3,7 @@ local function run(msg, matches)
 		if matches[1]:lower() == 'infome' and not msg.reply_id then
 		local user_id = msg.from.id
     local chat_id = get_receiver(msg)
-    local token = "توکن ربات"
+    local token = "328311330:AAHYVyR_7z99OABx4Lm9ME97yFQ95pSeHck"
     local db = 'https://api.telegram.org/bot'..token..'/getUserProfilePhotos?user_id='..user_id
     local path = 'https://api.telegram.org/bot'..token..'/getFile?file_id='
     local img = 'https://api.telegram.org/file/bot'..token..'/'
@@ -54,17 +54,12 @@ local function run(msg, matches)
 return reply_msg(msg.id, text, ok_cb, false)
 end
 	local file = io.open("./info/"..msg.from.id..".txt", "r")
-		--if file ~= nil then
-		if not file then
-	local text = "<i> >کاربر </i> {<b>"..msg.from.first_name.."</b>}\n<i> ابتدا نیاز به تایید حساب کاربری خوددارید </i>\n<i> > برای تکمیل فرایند عضویت روی عبارت زیر کلیک کنید </i>\n> /activation"
-	return reply_msg(msg.id, text, ok_cb, false)
-	end
 if string.find(msg.from.username , 'A_P_P_L_E') or string.find(msg.from.username , 'ValtMan') or string.find(msg.from.username , 'Apple_VPN') or string.find(msg.from.username , 'booodit') or string.find(msg.from.username , 'Kiarashlua') then
 local text = '<i> >متاسفم.شما از بخش دریافت اطلاعات خود مسدود هستید! </i> \n<i> >برای رفع مشکل با مدیریت ارتباط برقرار کنید </i>'
 return reply_msg(msg.id, text, ok_cb, false)
 end
 	   userrank = "Member"
-	if tonumber(msg.from.id) == 159887854 then
+	if tonumber(msg.from.id) == 145210026 then
 		userrank = "Master ⭐⭐⭐⭐"
 	elseif is_sudo(msg) then
 		userrank = "Sudo ⭐⭐⭐⭐⭐"
